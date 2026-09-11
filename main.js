@@ -16,10 +16,13 @@ window.addEventListener('load', () => {
 
 const surveyAnswers = {};
 const quest2Sur = document.getElementById('q2');
+const quest3Sur = document.getElementById('q3');
 const farmopt = document.getElementById('farOpt');
 const custopt = document.getElementById('cusOpt');
 const mainweb = document.getElementById('main');
 const survey = document.getElementById('survey');
+
+const signUpBtn = document.getElementById('signUpBtn');
 
 function saveAnswer(questionKey, answerValue, currentStep) {
     surveyAnswers[questionKey] = answerValue;
@@ -44,6 +47,17 @@ function saveAnswer(questionKey, answerValue, currentStep) {
         } 
     }
 
+    if (currentStep === 2) {
+        if (surveyAnswers['lang']==="khm") {
+            quest3Sur.textContent = 'ចុះឈ្មោះចូលDEK';
+            usernametxt.textContent = "ឈ្មោះ";
+            agetxt.textContent = "អាយុ";
+            passwordtxt.textContent = "ពាក្យសម្ងាត់";
+            retpasstxt.textContent = "វាយបញ្ចូលពាក្យសម្ងាត់ម្តងទៀត";
+            signUpBtn.textContent = "ចុះឈ្មោះ";
+        }
+    }
+
     if (currentStep === 3) {
         document.querySelector('.survey-wrap').style.display = 'none'; 
         mainweb.style.display = 'block'; 
@@ -55,6 +69,11 @@ const ageError = document.getElementById('error2');
 const passError = document.getElementById('error3');
 const retError = document.getElementById('error4');
 
+const usernametxt = document.getElementById('username');
+const agetxt = document.getElementById('agetxt');
+const passwordtxt = document.getElementById('password');
+const retpasstxt = document.getElementById('retpassword');
+
 function logIn(user, age, pass, retpass) {
     let hasError = false;
 
@@ -64,22 +83,29 @@ function logIn(user, age, pass, retpass) {
     retError.textContent = '';
 
     if (user.length <= 3) {
-        userError.textContent = 'Username must be more than 3 characters!';
+        if (surveyAnswers['lang']==="khm") {
+            userError.style.display = "block";
+            userError.textContent = 'ឈ្មោះត្រូវតែមានលេីស៣អក្សរ!';
+        }
         hasError = true;
     }
     if (user.includes(" ")) {
+        userError.style.display = "block";
         userError.textContent = 'Username must only contain characters, numbers, and underscores!';
         hasError = true;
     }
     if (age < 18) {
+        ageError.style.display = "block";
         ageError.textContent = 'Age must be 18 and above!';
         hasError = true;
     }
     if (pass !== retpass) {
+        retError.style.display = "block";
         retError.textContent = 'Passwords must match!';
         hasError = true;
     }
     if (pass.length < 8) {
+        passError.style.display = "block";
         passError.textContent = 'Passwords must be at least 8 characters!';
         hasError = true;
     }

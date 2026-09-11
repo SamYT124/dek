@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhumAgri</title>
+  <title>DEK</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,33 +26,33 @@
     </div>
 
     <div class="question-step" data-step="3">
-      <h2 id="q2">Sign Up to PhumAgri</h2>
+      <h2 id="q3">Sign Up to DEK</h2>
         <form id="signupForm">
           <div class="input-group">
-            <label for="regUsername">Username</label>
-            <input type="text" id="regUsername" required placeholder="Pick a username">
-            <label id="error">err</label>
+            <label for="regUsername" id="username">Username</label>
+            <input type="text" id="regUsername" required placeholder="Username">
+            <label id="error" class="signuperr">err</label>
           </div>
           <br>
           <div class="input-group">
-            <label for="regAge">Age</label>
-            <input type="number" id="regAge" min="1" max="120" required placeholder="Your age">
-            <label id="error2">err</label>
+            <label for="regAge" id="agetxt">Age</label>
+            <input type="number" id="regAge" min="1" max="120" required placeholder="Age">
+            <label id="error2" class="signuperr">err</label>
           </div>
           <br>
           <div class="input-group">
-              <label for="regPassword">Password</label>
-              <input type="password" id="regPassword" required placeholder="Choose a password">
-              <label id="error3">err</label>
+              <label for="regPassword" id="password">Password</label>
+              <input type="password" id="regPassword" required placeholder="Password">
+              <label id="error3" class="signuperr">err</label>
           </div>
           <br>
           <div class="input-group">
-              <label for="retPassword">Retype Password</label>
+              <label for="retPassword" id="retpassword">Retype Password</label>
               <input type="password" id="retPassword" required placeholder="Retype password">
-              <label id="error4">err</label>
+              <label id="error4" class="signuperr">err</label>
           </div>
           <br>
-          <button type="submit" class="btn-signup">Sign Up</button>
+          <button type="submit" class="survey-btn" id="signUpBtn">Sign Up</button>
       </form>
     </div>
   </div>

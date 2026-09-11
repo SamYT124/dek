@@ -109,3 +109,8 @@ p {
   text-align: center;
   display: none;
 }
+
+#signupForm .signuperr {
+  display: none;
+  color: red;
+}
