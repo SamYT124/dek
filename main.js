@@ -82,31 +82,55 @@ function logIn(user, age, pass, retpass) {
     passError.textContent = '';
     retError.textContent = '';
 
+    
     if (user.length <= 3) {
         if (surveyAnswers['lang']==="khm") {
             userError.style.display = "block";
             userError.textContent = 'ឈ្មោះត្រូវតែមានលេីស៣អក្សរ!';
+        } else {
+            userError.style.display = "block";
+            userError.textContent = 'Username must be over 3 characters!';
         }
         hasError = true;
     }
     if (user.includes(" ")) {
-        userError.style.display = "block";
-        userError.textContent = 'Username must only contain characters, numbers, and underscores!';
+        if (surveyAnswers['lang']==="khm") {
+            userError.style.display = "block";
+            userError.textContent = 'ឈ្មោះត្រូវតែមានអក្សរ​ លេខ នីងគូសបញ្ជាក់!';
+        } else {
+            userError.style.display = "block";
+            userError.textContent = 'Username only have characters, numbers, and underscores!';
+        }
         hasError = true;
     }
     if (age < 18) {
-        ageError.style.display = "block";
-        ageError.textContent = 'Age must be 18 and above!';
+        if (surveyAnswers['lang']==="khm") {
+            ageError.style.display = "block";
+            ageError.textContent = 'អាយុត្រូវលេីស១៨ឆ្នាំ!';
+        } else {
+            ageError.style.display = "block";
+            ageError.textContent = 'Age must be over 18!';
+        }
         hasError = true;
     }
     if (pass !== retpass) {
-        retError.style.display = "block";
-        retError.textContent = 'Passwords must match!';
+        if (surveyAnswers['lang']==="khm") {
+            retError.style.display = "block";
+            retError.textContent = 'ពាក្យសម្ងាត់ត្រូវតែដូចគ្នា!';
+        } else {
+            retError.style.display = "block";
+            retError.textContent = 'Passwords must be the same!';
+        }
         hasError = true;
-    }
+    } 
     if (pass.length < 8) {
-        passError.style.display = "block";
-        passError.textContent = 'Passwords must be at least 8 characters!';
+        if (surveyAnswers['lang']==="khm") {
+            passError.style.display = "block";
+            passError.textContent = 'ពាក្យសម្ងាត់ត្រូវតែលេីស៨អក្សរ!';
+        } else {
+            passError.style.display = "block";
+            passError.textContent = 'Password must be over 8 characters!';
+        }
         hasError = true;
     }
 
