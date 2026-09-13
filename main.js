@@ -174,10 +174,9 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
     console.log("Structured User Object (Ready for Database):", userData);
     console.log("Final Registration Data Complete:", surveyAnswers);
     
-    alert('Sign Up Complete! Redirecting to dashboard...');
-
     document.querySelector('.survey-wrap').style.display = 'none'; 
     if (mainweb) {
         mainweb.style.display = 'block'; 
+        window.location.href = "dashboard.html";
     }
 });
