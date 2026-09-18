@@ -28,7 +28,8 @@ p {
 
 .header {
   grid-area: header;
-  background-color: var(--bg-surface);
+  grid-row: 1 / span -1;
+  background-color: #ffe770;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,5 +39,5 @@ p {
 }
 
 .header img {
-  width: 10%
+  width: 15%
 }
