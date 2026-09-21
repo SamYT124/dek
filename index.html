@@ -67,35 +67,6 @@
   </main>
 
   <script src="main.js"></script>
-  <!-- 1. Include Firebase App (the core SDK) -->
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-
-<!-- 2. Include the specific Firebase products you want to use -->
-<!-- For Firestore Database -->
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-<!-- Or for Realtime Database: <script src="https://gstatic.com"></script> -->
-
-<script>
-  // 3. Your web app's Firebase configuration
-  // Copy and paste this exact object from your Firebase Console
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_://firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_://appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
-  };
-
-  // 4. Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  // 5. Initialize your database service
-  const db = firebase.firestore(); 
-  
-  // Quick test: Check if the connection works in your browser console
-  console.log("Firebase connected successfully!", db);
-</script>
-
+  <script type="module" src="firebase.js"></script>
 </body>
 </html>
