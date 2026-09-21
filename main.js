@@ -68,11 +68,13 @@ const userError = document.getElementById('error');
 const ageError = document.getElementById('error2');
 const passError = document.getElementById('error3');
 const retError = document.getElementById('error4');
+const phoneError = document.getElementById('error5');
 
 const usernametxt = document.getElementById('username');
 const agetxt = document.getElementById('agetxt');
 const passwordtxt = document.getElementById('password');
 const retpasstxt = document.getElementById('retpassword');
+const phonenumtxt = document.getElementById('regPNum');
 
 function logIn(user, age, pass, retpass) {
     let hasError = false;
@@ -130,6 +132,16 @@ function logIn(user, age, pass, retpass) {
         } else {
             passError.style.display = "block";
             passError.textContent = 'Password must be over 8 characters!';
+        }
+        hasError = true;
+    }
+    if (pass.length < 8) {
+        if (surveyAnswers['lang']==="khm") {
+            phoneError.style.display = "block";
+            phoneError.textContent = 'លេខទូរស័ព្ទមិនត្រឹមត្រូវ!';
+        } else {
+            phoneError.style.display = "block";
+            phoneError.textContent = 'Invalid Phone Number!';
         }
         hasError = true;
     }
