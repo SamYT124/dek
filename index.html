@@ -12,19 +12,6 @@
   </div>
   <div class="survey-wrap">
   <div id="survey" class="survey-card">
-    <div class="question-step active" data-step="1">
-      <h2>What is your preferred language?</h2>
-      <button class="survey-btn" onclick="saveAnswer('lang', 'eng', 1)">English</button>
-      <button class="survey-btn" onclick="saveAnswer('lang', 'khm', 1)">ខ្មែរ</button>
-      <button class="survey-btn" onclick="saveAnswer('lang', 'chi', 1)">中文</button>
-    </div>
-    
-    <div class="question-step" data-step="2">
-      <h2 id="q2">Which of these descibe you best?</h2>
-      <button id='farOpt' class="survey-btn" onclick="saveAnswer('user', 'farmer', 2)">Farmer</button>
-      <button id="cusOpt" class="survey-btn" onclick="saveAnswer('user', 'custom', 2)">Customer</button>
-    </div>
-
     <div class="question-step" data-step="3">
       <h2 id="q3">Sign Up to DEK</h2>
         <form id="signupForm">
@@ -54,6 +41,18 @@
           <br>
           <button type="submit" class="survey-btn" id="signUpBtn">Sign Up</button>
       </form>
+    </div>
+    <div class="question-step active" data-step="1">
+      <h2>What is your preferred language?</h2>
+      <button class="survey-btn" onclick="saveAnswer('lang', 'eng', 1)">English</button>
+      <button class="survey-btn" onclick="saveAnswer('lang', 'khm', 1)">ខ្មែរ</button>
+      <button class="survey-btn" onclick="saveAnswer('lang', 'chi', 1)">中文</button>
+    </div>
+    
+    <div class="question-step" data-step="2">
+      <h2 id="q2">Which of these descibe you best?</h2>
+      <button id='farOpt' class="survey-btn" onclick="saveAnswer('user', 'farmer', 2)">Farmer</button>
+      <button id="cusOpt" class="survey-btn" onclick="saveAnswer('user', 'custom', 2)">Customer</button>
     </div>
   </div>
   </div>
