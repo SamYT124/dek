@@ -66,6 +66,14 @@
     <h1>Redirecting...</h1>
   </main>
 
-  <script src="main.js"></script>
+  <!-- 1. Core Firebase Engine from node_modules -->
+<script src="./node_modules/firebase/firebase-app-compat.js"></script>
+
+<!-- 2. Firestore Component from node_modules -->
+<script src="./node_modules/firebase/firebase-firestore-compat.js"></script>
+
+<!-- 3. Your script (Keep it as a regular script, no type="module") -->
+<script src="main.js"></script>
+
 </body>
 </html>
