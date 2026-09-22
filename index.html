@@ -16,6 +16,12 @@
       <h2 id="q3">Sign Up to DEK</h2>
         <form id="signupForm">
           <div class="input-group">
+            <label for="regFullname" id="fullname">Full Name</label>
+            <input type="text" id="regFullname" required placeholder="Full Name">
+            <label id="error0" class="signuperr">err</label>
+          </div>
+          <br>
+          <div class="input-group">
             <label for="regUsername" id="username">Username</label>
             <input type="text" id="regUsername" required placeholder="Username">
             <label id="error" class="signuperr">err</label>
@@ -40,9 +46,9 @@
           </div>
           <br>
           <div class="input-group">
-              <label for="regPNum" id="regPNum">Phone Number</label>
+              <label for="regPNum" id="phoneLabel">Phone Number</label> 
               <input type="tel" id="regPNum" required placeholder="Phone Number">
-              <label id="error5" class="signuperr">err</label>
+              <label id="error5" class="signuperr" style="display:none;"></label>
           </div>
           <br>
           <button type="submit" class="survey-btn" id="signUpBtn">Sign Up</button>
@@ -65,8 +71,9 @@
   <main id="main" class="main-content">
     <h1>Redirecting...</h1>
   </main>
+    <script type="module" src="./modules/firebase.js"></script>
 
-  <script src="main.js"></script>
-  <script type="module" src="firebase.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
+
