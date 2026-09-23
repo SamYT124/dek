@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./assets/loginpage.css">
 </head>
 <body>
+  <div id="recaptcha-container"></div>
   <div id="loading-screen">
     <img src="./assets/logo-2.png" alt="Website Logo" class="loading-logo">
   </div>
@@ -66,14 +67,11 @@
     <h1>Redirecting...</h1>
   </main>
 
-  <!-- 1. Core Firebase Engine from node_modules -->
 <script src="./node_modules/firebase/firebase-app-compat.js"></script>
-
-<!-- 2. Firestore Component from node_modules -->
 <script src="./node_modules/firebase/firebase-firestore-compat.js"></script>
-
-<!-- 3. Your script (Keep it as a regular script, no type="module") -->
+<script src="./node_modules/firebase/firebase-auth-compat.js"></script>
 <script src="main.js"></script>
+<script type="module" src="firebase.js"></script>
 
 </body>
 </html>
